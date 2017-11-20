@@ -16,7 +16,7 @@ class Graphics:
         while not done:
             pygame.event.set_grab(True)
             #print (pygame.key.get_focused)
-            pygame.draw.rect(screen, [200,200,200], (450,450,20,20), 10)
+
             for event in pygame.event.get():
                     if event.type == pygame.QUIT:
                         done = True
@@ -24,6 +24,7 @@ class Graphics:
                         return
                     if event.type == pygame.KEYDOWN:
                         print ("key")
+                        pygame.draw.rect(screen, [200,200,200], (450,450,20,20), 10)
                         if event.key == pygame.K_ESCAPE:
                             pygame.quit()
                             print ("exiting")
